@@ -1,0 +1,175 @@
+.home__container{
+    position: relative;
+    width: 100%;
+    height: 823px;
+    margin-top: 10px;
+    /* padding: 14px; */
+    border: 1px solid #000;
+}
+
+.home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    width: 100%;
+    background-color: transparent; /* Задайте базовий колір для фону */
+}
+
+/* Стилі для сітки */
+.home-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: calc(100%/3) calc(100%/3);
+    z-index: 0;
+}
+
+.home__content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__text{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+line-height: 136%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+text-align: center;
+color: #000;
+}
+
+.home__downpart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__listsWrapper{
+    width: 948px;
+}
+
+.home__list{
+    display: flex;
+    align-items:flex-end;
+    gap: 8px;
+}
+
+.home__list:not(:last-child){
+    margin-bottom: 8px;
+}
+
+.home__list--right{
+    margin-left: 150px;
+}
+
+.home__item{
+    font-family: var(--font-main);
+font-weight: 400;
+font-size: 14px;
+line-height: 1.53;
+text-transform: uppercase;
+color: #000;
+}
+
+.home__item--uppercase{
+    font-size: 40px;
+line-height: 1.02;
+}
+
+.home__titleWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.home__title{
+    font-family: var(--font-family);
+font-weight: 900;
+font-size: 260px;
+line-height: 117%;
+letter-spacing: -0.03em;
+text-transform: uppercase;
+color: #000;
+}
+
+.title__figure {
+    position: relative;
+    width: 310px;
+    height: 200px;
+}
+
+.title__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/home/title.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Перше коло */
+.title__img--circleOne {
+    clip-path: circle(70px at 70px 90px);
+}
+
+/* Друге коло */
+.title__img--circleTwo {
+    clip-path: circle(100px at 200px 100px);
+}
+
+
+/* .title__figure{
+    position: relative;
+    width: 310px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    z-index: 3;
+
+}
+
+.title__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/home/title.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.title__circleOne{
+    width: 140px;
+    height: 140px;
+    background-color:red;
+    border-radius: 50%;
+}
+
+.title__circleTwo{
+    width: 220px;
+    height: 220px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: -50px;
+} */

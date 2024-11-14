@@ -1,0 +1,85 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+        --container-width: 1430px;
+        --container-padding: 14px;
+    
+        --font-main: 'Lato', sans-serif;
+    
+        --page-bg: #e7e7e7;
+        --accent: #d00b0e;
+        --text-white: #fff;
+        --text-color: #000;
+		--border-color: rgba(0, 0, 0, 0.3);
+    
+        --laptop-size: 1430px;
+        --tablet-size: 920px;
+        --mobile-size: 320px;
+    
+	/* Nav */
+	--nav-bg: var(--black);
+	--nav-border: var(--black-border);
+	--nav-text: var(--white);
+
+	/* Header */
+	--header-bg: var(--black);
+	--header-text: var(--white);
+
+	/* Footer */
+	--footer-bg: var(--black);
+	--footer-text: var(--white);
+
+	/* Light mode */
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+	--title-1: var(--accent);
+
+	--project-card-bg: var(--white);
+	--project-card-text: var(--black);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* .dark { */
+	/* Dark mode */
+	/* --page-bg: #252526;
+	--text-color: var(--white);
+
+	--title-1: var(--white);
+
+	--project-card-bg: var(--black);
+	--project-card-text: var(--white);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8); */
+/* } */
+
+html,
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	font-family: 'Lato', sans-serif;
+	letter-spacing: -0.5px;
+
+	background-color: var(--page-bg);
+	color: var(--text-color);
+	text-wrap: balance;
+}
+
+/* General */
+
+.container {
+	margin: 20px auto;
+	padding: 14px 15px;
+	max-width: 1430px;
+}
+
+.none {
+	display: none !important;
+}
+
+.section {
+	padding: 70px 0;
+}
