@@ -7,6 +7,67 @@
     border: 1px solid #000;
 }
 
+
+
+
+.home__container::before,
+.home__container::after,
+.home__container .corner-top-left,
+.home__container .corner-top-right,
+.home__container .corner-bottom-left,
+.home__container .corner-bottom-right {
+    content: "";
+    position: absolute;
+    background-color: transparent; /* Прозорі кути */
+}
+
+/* Верхній лівий кут */
+.home__container .corner-top-left {
+    top: -1px; /* Зсув для вирівнювання з border */
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid red;
+    border-left: 1px solid red;
+}
+
+/* Верхній правий кут */
+.home__container .corner-top-right {
+    top: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+}
+
+/* Нижній лівий кут */
+.home__container .corner-bottom-left {
+    bottom: -1px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+}
+
+/* Нижній правий кут */
+.home__container .corner-bottom-right {
+    bottom: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid red;
+    border-right: 1px solid red;
+}
+
+
+
+
+
+
+
+
 .home-background {
     position: absolute;
     top: 0;
@@ -111,7 +172,7 @@ color: #000;
 .title__figure {
     position: relative;
     width: 310px;
-    height: 200px;
+    height: 245px;
 }
 
 .title__img {
@@ -127,49 +188,11 @@ color: #000;
 
 /* Перше коло */
 .title__img--circleOne {
-    clip-path: circle(70px at 70px 90px);
+    clip-path: circle(65px at 70px 120px);
 }
 
 /* Друге коло */
 .title__img--circleTwo {
-    clip-path: circle(100px at 200px 100px);
+    clip-path: circle(110px at 200px 120px);
 }
 
-
-/* .title__figure{
-    position: relative;
-    width: 310px;
-    margin-left: 8px;
-    display: flex;
-    align-items: center;
-    background-color: #e7e7e7;
-    z-index: 3;
-
-}
-
-.title__img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../../img/home/title.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.title__circleOne{
-    width: 140px;
-    height: 140px;
-    background-color:red;
-    border-radius: 50%;
-}
-
-.title__circleTwo{
-    width: 220px;
-    height: 220px;
-    background-color: red;
-    border-radius: 50%;
-    margin-left: -50px;
-} */
