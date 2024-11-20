@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css'
+import './Home.css'
 
 const Home = () => {
   return (
@@ -35,17 +35,11 @@ const Home = () => {
 
         <div className='home__titleWrapper'>
         <h2 className='home__title'>L</h2>
-        <div class="title__figure">
-    <div class="title__img title__img--circleOne"></div>
-    <div class="title__img title__img--circleTwo"></div>
+        <div className="title__figure">
+    <div className="title__img title__img--circleOne"></div>
+    <div className="title__img title__img--circleTwo"></div>
 </div>
         
-        {/* <div className="title__figure">
-            <div className='title__img'></div>
-        <div className='title__circleOne'></div>
-        <div className='title__circleTwo'></div>
-        
-        </div> */}
         <h2 className='home__title'>kers</h2>
         </div>
         

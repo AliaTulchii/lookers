@@ -10,8 +10,10 @@
     
         --page-bg: #e7e7e7;
         --accent: #d00b0e;
-        --text-white: #fff;
-        --text-color: #000;
+        --white: #fff;
+        --black: #000;
+		--white-line: #ffffff38;
+		--black-line: #00000038;
 		--border-color: rgba(0, 0, 0, 0.3);
     
         --laptop-size: 1430px;
@@ -20,7 +22,7 @@
     
 	/* Nav */
 	--nav-bg: var(--black);
-	--nav-border: var(--black-border);
+	--nav-border: var(--black);
 	--nav-text: var(--white);
 
 	/* Header */
@@ -34,25 +36,25 @@
 	/* Light mode */
 	--page-bg: var(--white);
 	--text-color: var(--black);
-	--accent: var(--purple);
-	--title-1: var(--accent);
+    --line: var(--black-line);
 
 	--project-card-bg: var(--white);
 	--project-card-text: var(--black);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* .dark { */
+.dark {
 	/* Dark mode */
-	/* --page-bg: #252526;
+	--page-bg: #0f0f0f;
 	--text-color: var(--white);
+    --line: var(--white-line);
 
-	--title-1: var(--white);
 
 	--project-card-bg: var(--black);
 	--project-card-text: var(--white);
-	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8); */
-/* } */
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8); 
+	--nav-border: var(--white);
+ }
 
 html,
 body {
