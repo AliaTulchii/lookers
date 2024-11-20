@@ -15,10 +15,18 @@ const Nav = () => {
                 
                 
                     <button className="dark-mode-btn">
+                    <div className="corner-tl"></div>
+                <div className="corner-tr"></div>
+                <div className="corner-bl"></div>
+                <div className="corner-br"></div>
                     ISO:100
                     </button>            
 
                 <button className='nav-menu'>
+                <div className="corner-tl"></div>
+                <div className="corner-tr"></div>
+                <div className="corner-bl"></div>
+                <div className="corner-br"></div>
                     Menu 
                     <span className='nav-menu__plus'>+</span>
                 </button>
