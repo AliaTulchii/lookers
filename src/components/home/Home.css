@@ -7,8 +7,6 @@
 }
 
 
-
-
 .home__container::before,
 .home__container::after,
 .home__container .corner-top-left,
@@ -59,12 +57,6 @@
     border-bottom: 1px solid red;
     border-right: 1px solid red;
 }
-
-
-
-
-
-
 
 
 .home-background {
@@ -191,7 +183,8 @@ color: var(--text-color);
 }
 
 /* Друге коло */
-.title__img--circleTwo {
+ .title__img--circleTwo {
     clip-path: circle(110px at 200px 120px);
-}
+} 
+
 

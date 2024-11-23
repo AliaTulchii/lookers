@@ -43,7 +43,7 @@ const Home = () => {
         <h2 className='home__title'>kers</h2>
         </div>
         
-       
+
 
         </div>
         </div>
