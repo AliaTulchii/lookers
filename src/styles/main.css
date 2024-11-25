@@ -60,6 +60,7 @@
 	--page-bg: var(--accent);
 	--text-color: var(--white);
     --line: var(--white-line);
+	--nav-border: var(--white);
  }
 
 html,

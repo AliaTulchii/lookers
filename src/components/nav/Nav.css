@@ -239,16 +239,18 @@ color: var(--text-color);
     overflow: hidden;
     background: rgba(247, 247, 247, 0.092); 
     backdrop-filter: blur(3px); 
-    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: top 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-links{
     display: flex;
     gap: 12px;
-
+    
 }
 
 .nav-item{
+    position: fixed;
+    top: -100%;
     width: 348px;
     text-align: start;
     text-transform: uppercase;
@@ -258,4 +260,6 @@ color: var(--text-color);
     color: black;
     background-color: var(--page-bg);
     border: 1px solid var(--text-color);
+    transition: top 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
