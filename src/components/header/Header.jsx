@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './Header.css'
 import Nav from '../nav/Nav'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
+    const location = useLocation()
 
   useEffect(() => {
     const body = document.body;
@@ -15,6 +16,10 @@ const Header = () => {
       body.classList.remove("red");
     }
   }, [navOpen]);
+
+  useEffect(() => {
+    setNavOpen(false); // Закриваємо меню
+  }, [location]);
 
   return (
     <div className="header__container">

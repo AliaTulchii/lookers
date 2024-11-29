@@ -2,8 +2,7 @@
 	width: 100%;
 	position: relative;
 	margin: 20px auto;
-	max-width: 1430px;
-    
+	max-width: 1430px;    
     z-index: 3;
 }
 .grid-background{
@@ -103,24 +102,24 @@ color: var(--header-text);
 
 
 /* Стилі для куточків */
-.header .corner-tl,
-.header .corner-tr,
-.header .corner-bl,
-.header .corner-br {
+.headerbtn .corner-tl,
+.headerbtn .corner-tr,
+.headerbtn .corner-bl,
+.headerbtn .corner-br {
     position: absolute;
     width: 10px;
     height: 10px;
 }
 
 /* Псевдоелементи для ліній */
-.header .corner-tl::before,
-.header .corner-tl::after,
-.header .corner-tr::before,
-.header .corner-tr::after,
-.header .corner-bl::before,
-.header .corner-bl::after,
-.header .corner-br::before,
-.header .corner-br::after {
+.headerbtn .corner-tl::before,
+.headerbtn .corner-tl::after,
+.headerbtn .corner-tr::before,
+.headerbtn .corner-tr::after,
+.headerbtn .corner-bl::before,
+.headerbtn .corner-bl::after,
+.headerbtn .corner-br::before,
+.headerbtn .corner-br::after {
     content: '';
     position: absolute;
     background-color: #ff0000; /* Колір ліній */
@@ -129,19 +128,19 @@ color: var(--header-text);
 }
 
 /* Верхній лівий кут */
-.header .corner-tl {
+.headerbtn .corner-tl {
     top: 3px;
     left: 3px;
 }
 
-.header .corner-tl::before {
+.headerbtn .corner-tl::before {
     width: 12px;
     height: 1px;
     top: 3px;
     left: 3px;
 }
 
-.header .corner-tl::after {
+.headerbtn .corner-tl::after {
     width: 1px;
     height: 12px;
     top: 3px;
@@ -149,19 +148,19 @@ color: var(--header-text);
 }
 
 /* Верхній правий кут */
-.header .corner-tr {
+.headerbtn .corner-tr {
     top: 3px;
     right: 3px;
 }
 
-.header .corner-tr::before {
+.headerbtn .corner-tr::before {
     width: 12px;
     height: 1px;
     top: 3px;
     right: 3px;
 }
 
-.header .corner-tr::after {
+.headerbtn .corner-tr::after {
     width: 1px;
     height: 12px;
     top: 3px;
@@ -169,19 +168,19 @@ color: var(--header-text);
 }
 
 /* Нижній лівий кут */
-.header .corner-bl {
+.headerbtn .corner-bl {
     bottom: 3px;
     left: 3px;
 }
 
-.header .corner-bl::before {
+.headerbtn .corner-bl::before {
     width: 12px;
     height: 1px;
     bottom: 3px;
     left: 3px;
 }
 
-.header .corner-bl::after {
+.headerbtn .corner-bl::after {
     width: 1px;
     height: 12px;
     bottom: 3px;
@@ -189,19 +188,19 @@ color: var(--header-text);
 }
 
 /* Нижній правий кут */
-.header .corner-br {
+.headerbtn .corner-br {
     bottom: 3px;
     right: 3px;
 }
 
-.header .corner-br::before {
+.headerbtn .corner-br::before {
     width: 12px;
     height: 1px;
     bottom: 3px;
     right: 3px;
 }
 
-.header .corner-br::after {
+.headerbtn .corner-br::after {
     width: 1px;
     height: 12px;
     bottom: 3px;
@@ -209,14 +208,14 @@ color: var(--header-text);
 }
 
 /* Відображення ліній при ховері */
-.header:hover .corner-tl::before,
-.header:hover .corner-tl::after,
-.header:hover .corner-tr::before,
-.header:hover .corner-tr::after,
-.header:hover .corner-bl::before,
-.header:hover .corner-bl::after,
-.header:hover .corner-br::before,
-.header:hover .corner-br::after {
+.headerbtn:hover .corner-tl::before,
+.headerbtn:hover .corner-tl::after,
+.headerbtn:hover .corner-tr::before,
+.headerbtn:hover .corner-tr::after,
+.headerbtn:hover .corner-bl::before,
+.headerbtn:hover .corner-bl::after,
+.headerbtn:hover .corner-br::before,
+.headerbtn:hover .corner-br::after {
     opacity: 1;
 }
 
