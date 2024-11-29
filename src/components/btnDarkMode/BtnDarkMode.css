@@ -1,6 +1,7 @@
 .dark-mode-btn{
     position: relative;
     padding: 10px 18px;
+    color: var(--header-text);
 }
 
 

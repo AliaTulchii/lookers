@@ -1,0 +1,11 @@
+.contact__container{
+    background-color: var(--white-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__container h1{
+    font-size: 52px;
+    color: var(--page-bg);
+}

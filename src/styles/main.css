@@ -24,10 +24,11 @@
 	--nav-bg: var(--black);
 	--nav-border: var(--black);
 	--nav-text: var(--white);
+	--nav-line:var(--white-line);
 
 	/* Header */
-	--header-bg: var(--black);
-	--header-text: var(--white);
+	--header-bg: var(--white);
+	--header-text: var(--black);
 
 	/* Footer */
 	--footer-bg: var(--black);
@@ -37,6 +38,9 @@
 	--page-bg: var(--white);
 	--text-color: var(--black);
     --line: var(--black-line);
+	--header-text: var(--black);
+	--home-text: var(--black);
+	--nav-text: var(--black);
 
 	--project-card-bg: var(--white);
 	--project-card-text: var(--black);
@@ -47,8 +51,11 @@
 	/* Dark mode */
 	--page-bg: #0f0f0f;
 	--text-color: var(--white);
+	--header-text: var(--white);
     --line: var(--white-line);
-
+	--header-bg: var(--black);
+	--home-text: var(--white);
+	--nav-text: var(--black);
 
 	--project-card-bg: var(--black);
 	--project-card-text: var(--white);
@@ -59,8 +66,12 @@
  .red{
 	--page-bg: var(--accent);
 	--text-color: var(--white);
-    --line: var(--white-line);
-	--nav-border: var(--white);
+	--line: var(--black-line);
+	--nav-border: var(--black);
+	--header-bg: var(--white);
+	--home-text: var(--black);
+	--nav-text: var(--black);
+	--header-text: var(--black);
  }
 
 html,

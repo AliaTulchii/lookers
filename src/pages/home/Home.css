@@ -137,7 +137,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.53;
 text-transform: uppercase;
-color: var(--line);
+color: var(--home-text);
 }
 
 .home__item--uppercase{
@@ -157,7 +157,7 @@ font-size: 260px;
 line-height: 117%;
 letter-spacing: -0.03em;
 text-transform: uppercase;
-color: var(--text-color);
+color: var(--home-text);
 }
 
 .title__figure {

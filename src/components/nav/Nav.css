@@ -1,234 +1,9 @@
-.nav__container{
-	width: 100%;
-	position: relative;
-	margin: 20px auto;
-	max-width: 1430px;
-}
-.grid-background{
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-	height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    z-index: 1;
-    pointer-events: none;
-}
-
-.grid-background::before {
-	content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
-    background-size: calc(100% / 3) 100%; 
-    z-index: 1;
-}
-
-
-
-.nav {
-	position: relative;
-	width: 100%;
-	padding-left: 42px;
-	background-color: transparent;
-	border: 1px solid var(--nav-border);
-	color: var(--text-color);
-	letter-spacing: normal;
-	z-index: 4;
-}
-
-.nav-row {
-    position: relative;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	z-index: 4;
-}
-
-.logo {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.logo-circle{
-	width: 12px;
-	height: 12px;
-	border-radius: 100%;
-    background-color: #d00b0e;
-	animation: blink 1.5s infinite;
-}
-
-
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
-.logo-text{
-	font-family: var(--font-main);
-font-weight: 700;
-font-size: 12px;
-letter-spacing: -0.01em;
-text-transform: uppercase;
-color: #d00b0e;
-}
-
-
-.nav-menu{
-    position: relative;
-	padding: 16px 38px;
-	border-left: 1px solid rgba(0, 0, 0, 0.3);
-	font-family: var(--font-main);
-font-weight: 400;
-font-size: 12px;
-text-transform: uppercase;
-text-align: center;
-letter-spacing: -0.01em;
-color: var(--text-color);
-}
-
-
-/* Стилі для куточків */
-.nav-menu .corner-tl,
-.nav-menu .corner-tr,
-.nav-menu .corner-bl,
-.nav-menu .corner-br {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-}
-
-/* Псевдоелементи для ліній */
-.nav-menu .corner-tl::before,
-.nav-menu .corner-tl::after,
-.nav-menu .corner-tr::before,
-.nav-menu .corner-tr::after,
-.nav-menu .corner-bl::before,
-.nav-menu .corner-bl::after,
-.nav-menu .corner-br::before,
-.nav-menu .corner-br::after {
-    content: '';
-    position: absolute;
-    background-color: #ff0000; /* Колір ліній */
-    transition: all 0.3s ease-in-out;
-    opacity: 0; /* Невидимі на початку */
-}
-
-/* Верхній лівий кут */
-.nav-menu .corner-tl {
-    top: 3px;
-    left: 3px;
-}
-
-.nav-menu .corner-tl::before {
-    width: 12px;
-    height: 1px;
-    top: 3px;
-    left: 3px;
-}
-
-.nav-menu .corner-tl::after {
-    width: 1px;
-    height: 12px;
-    top: 3px;
-    left: 3px;
-}
-
-/* Верхній правий кут */
-.nav-menu .corner-tr {
-    top: 3px;
-    right: 3px;
-}
-
-.nav-menu .corner-tr::before {
-    width: 12px;
-    height: 1px;
-    top: 3px;
-    right: 3px;
-}
-
-.nav-menu .corner-tr::after {
-    width: 1px;
-    height: 12px;
-    top: 3px;
-    right: 3px;
-}
-
-/* Нижній лівий кут */
-.nav-menu .corner-bl {
-    bottom: 3px;
-    left: 3px;
-}
-
-.nav-menu .corner-bl::before {
-    width: 12px;
-    height: 1px;
-    bottom: 3px;
-    left: 3px;
-}
-
-.nav-menu .corner-bl::after {
-    width: 1px;
-    height: 12px;
-    bottom: 3px;
-    left: 3px;
-}
-
-/* Нижній правий кут */
-.nav-menu .corner-br {
-    bottom: 3px;
-    right: 3px;
-}
-
-.nav-menu .corner-br::before {
-    width: 12px;
-    height: 1px;
-    bottom: 3px;
-    right: 3px;
-}
-
-.nav-menu .corner-br::after {
-    width: 1px;
-    height: 12px;
-    bottom: 3px;
-    right: 3px;
-}
-
-/* Відображення ліній при ховері */
-.nav-menu:hover .corner-tl::before,
-.nav-menu:hover .corner-tl::after,
-.nav-menu:hover .corner-tr::before,
-.nav-menu:hover .corner-tr::after,
-.nav-menu:hover .corner-bl::before,
-.nav-menu:hover .corner-bl::after,
-.nav-menu:hover .corner-br::before,
-.nav-menu:hover .corner-br::after {
-    opacity: 1;
-}
-
-.nav-menu__plus{
-	margin-left: 4px;
-	font-size: 14px;
-}
-
 .nav-overlay{
     position: fixed;
     z-index: -2;
-    top: -100%;
+    top: 0;
     left: 0;
+    display: none;
     width: 100%;
     height: 100vh;
     padding-top: 60px;
@@ -237,29 +12,173 @@ color: var(--text-color);
     justify-content: start;
     align-items: center;
     overflow: hidden;
-    background: rgba(247, 247, 247, 0.092); 
-    backdrop-filter: blur(3px); 
-    transition: top 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    /* background: rgba(247, 247, 247, 0.092);  */
+    backdrop-filter: blur(2px); 
+    transition: top 0.8s ease-in-out;
 }
 
-.nav-links{
+.nav__list{
     display: flex;
-    gap: 12px;
-    
+    justify-content: center;
+    gap: 13px;
+    padding-top: 20px;
 }
 
-.nav-item{
-    position: fixed;
-    top: -100%;
+.nav__item{
     width: 348px;
-    text-align: start;
+    text-align: start;      
+    background-color: var(--header-bg);
+    border: 1px solid var(--black);
+}
+
+.item__subitem{
+    position: relative;
+    padding: 55px 22px 24px 22px;  
+    border-bottom: 1px solid var(--black);
+}
+
+
+.item__subitem .corner-tl,
+.item__subitem .corner-tr,
+.item__subitem .corner-bl,
+.item__subitem .corner-br {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+/* Псевдоелементи для ліній */
+.item__subitem .corner-tl::before,
+.item__subitem .corner-tl::after,
+.item__subitem .corner-tr::before,
+.item__subitem .corner-tr::after,
+.item__subitem .corner-bl::before,
+.item__subitem .corner-bl::after,
+.item__subitem .corner-br::before,
+.item__subitem .corner-br::after {
+    content: '';
+    position: absolute;
+    background-color: #ff0000; /* Колір ліній */
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* Невидимі на початку */
+}
+
+/* Верхній лівий кут */
+.item__subitem .corner-tl {
+    top:20px;
+    left: 8px;
+}
+
+.item__subitem .corner-tl::before {
+    width: 18px;
+    height: 1px;
+    top: 3px;
+    left: 3px;
+}
+
+.item__subitem .corner-tl::after {
+    width: 1px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+}
+
+/* Верхній правий кут */
+.item__subitem .corner-tr {
+    top: 20px;
+    right: 84px;
+}
+
+.item__subitem .corner-tr::before {
+    width: 18px;
+    height: 1px;
+    top: 3px;
+    right: 3px;
+}
+
+.item__subitem .corner-tr::after {
+    width: 1px;
+    height: 18px;
+    top: 3px;
+    right: 3px;
+}
+
+/* Нижній лівий кут */
+.item__subitem .corner-bl {
+    bottom: 20px;
+    left: 8px;
+}
+
+.item__subitem .corner-bl::before {
+    width: 18px;
+    height: 1px;
+    bottom: 3px;
+    left: 3px;
+}
+
+.item__subitem .corner-bl::after {
+    width: 1px;
+    height: 18px;
+    bottom: 3px;
+    left: 3px;
+}
+
+/* Нижній правий кут */
+.item__subitem .corner-br {
+    bottom: 20px;
+    right: 84px;
+}
+
+.item__subitem .corner-br::before {
+    width: 18px;
+    height: 1px;
+    bottom: 3px;
+    right: 3px;
+}
+
+.item__subitem .corner-br::after {
+    width: 1px;
+    height: 18px;
+    bottom: 3px;
+    right: 3px;
+}
+
+/* Відображення ліній при ховері */
+.item__subitem:hover .corner-tl::before,
+.item__subitem:hover .corner-tl::after,
+.item__subitem:hover .corner-tr::before,
+.item__subitem:hover .corner-tr::after,
+.item__subitem:hover .corner-bl::before,
+.item__subitem:hover .corner-bl::after,
+.item__subitem:hover .corner-br::before,
+.item__subitem:hover .corner-br::after {
+    opacity: 1;
+}
+
+
+.item__subitem--uppercase{
+    padding: 24px 0 24px 22px; 
+}
+
+.nav__link{
+    display: flex;
+    justify-content: space-between;
     text-transform: uppercase;
-    padding: 24px 0 24px 22px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--nav-text);
+}
+
+.nav__link img{
+    stroke:#808080;
+}
+
+.nav__link:hover img{
+    stroke: red;
+}
+
+.nav__link--uppercase{
+    text-transform: uppercase;
     font-size: 49px;
     font-weight: 700;
-    color: black;
-    background-color: var(--page-bg);
-    border: 1px solid var(--text-color);
-    transition: top 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
-

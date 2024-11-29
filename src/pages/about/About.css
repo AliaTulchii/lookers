@@ -1,0 +1,12 @@
+.about__container{
+    background-color: var(--white-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.about__title{
+    font-size: 52px;
+    color: var(--accent);
+}

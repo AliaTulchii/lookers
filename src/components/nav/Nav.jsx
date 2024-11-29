@@ -1,97 +1,142 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../../styles/main.css'
 import  './Nav.css'
-import BtnDarkMode from '../btnDarkMode/BtnDarkMode'
 import { NavLink } from 'react-router-dom'
+import Arrow from '../../icons/Arrow'
 
-const Nav = () => {
-  const [navOpen, setNavOpen] = useState(false)
+const Nav = ({navOpen}) => {
+  
 
-  useEffect(() => {
-    const body = document.body;
-    if (navOpen) {
-      body.classList.add("red");
-    } else {
-      body.classList.remove("red");
-    }
-  }, [navOpen]);
-
-  // useEffect(() => {
-  //   if (navOpen) {
-  //     const navItems = document.querySelectorAll(".nav-item");
-  //     navItems.forEach((item, index) => {
-  //       item.style.opacity = "1";
-  //       item.style.transform = "translateY(0)";
-  //       item.style.transitionDelay = `${index * 0.5}s`;
-  //     });
-  //   } else {
-  //     const navItems = document.querySelectorAll(".nav-item");
-  //     navItems.forEach((item) => {
-  //       item.style.opacity = "0";
-  //       item.style.transform = "translateY(20px)";
-  //       item.style.transitionDelay = "0s";
-  //     });
-  //   }
-  // }, [navOpen]);
   return (
-    <div className="nav__container">
-        <div className='grid-background'></div>
-        <nav className="nav">
-            <div className="nav-row">
-                <a href="./index.html" className="logo">
-                <div className="logo-circle"></div>
-                <p className='logo-text'>Lookers</p>                
-                </a>
-                
-                
-            <BtnDarkMode/>
-
-                <button className='nav-menu' onClick={() => setNavOpen(!navOpen)}>
-                <div className="corner-tl"></div>
-                <div className="corner-tr"></div>
-                <div className="corner-bl"></div>
-                <div className="corner-br"></div>
-                    {navOpen ? 'Close' : 'Menu'}
-                    <span className='nav-menu__plus'>+</span>
-                </button>
-            </div>
-    </nav>
     <div className='nav-overlay ' style={{
-      top: navOpen ? '0%' : '-100%',
+      // top: navOpen ? '0%' : '-100%',
       zIndex: navOpen ? '3' : '-2',
+      display: navOpen ? 'block' : 'none',
       transitionDelay: navOpen ? '0s' : '0s'
     }}>
-      <ul className='nav-links '>
-        <li className='nav-item' style={{
-      top: navOpen ? '9%' : '-100%',
-      left: navOpen ? '12.2%' : '0%',
-      transitionDelay: navOpen ? '0s' : '0s'
-    }}>
-          <NavLink to='/'>Works</NavLink>
+      <ul className='nav__list '>
+        <li className='nav__item'>
+          <ul className='item__sublist'>          
+            <li className='item__subitem item__subitem--uppercase'>
+            <div className="corner-tl"></div>
+      <div className="corner-tr"></div>
+      <div className="corner-bl"></div>
+      <div className="corner-br"></div>
+                <NavLink to='/works' className='nav__link nav__link--uppercase'>
+                Works
+                </NavLink>
+            </li>
+            <li className='item__subitem'>
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'>
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'>
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+          </ul>
         </li>
-        <li className='nav-item' style={{
-      top: navOpen ? '9%' : '-100%',
-      left: navOpen ? '31.4%' : '0%',
-      transitionDelay: navOpen ? '0s' : '0s'
-    }}>
-          <NavLink to='/'>About</NavLink>
+
+        <li className='nav__item' >
+        <ul className='item__sublist'>          
+            <li className='item__subitem item__subitem--uppercase'>
+            <div className="corner-tl"></div>
+      <div className="corner-tr"></div>
+      <div className="corner-bl"></div>
+      <div className="corner-br"></div>
+                <NavLink to='/about' className='nav__link nav__link--uppercase'>About</NavLink>
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+          </ul>
         </li>
-        <li className='nav-item' style={{
-      top: navOpen ? '9%' : '-100%',
-      left: navOpen ? '50.4%' : '0%',
-      transitionDelay: navOpen ? '0s' : '0s'
-    }}>
-          <NavLink to='/'>Services</NavLink>
+
+        <li className='nav__item' >
+        <ul className='item__sublist'>          
+            <li className='item__subitem item__subitem--uppercase'>
+            <div className="corner-tl"></div>
+      <div className="corner-tr"></div>
+      <div className="corner-bl"></div>
+      <div className="corner-br"></div>
+                <NavLink to='/services' className='nav__link nav__link--uppercase'>Services</NavLink>
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+          </ul>
         </li>
-        <li className='nav-item' style={{
-      top: navOpen ? '9%' : '-100%',
-      left: navOpen ? '69.5%' : '0%',
-      transitionDelay: navOpen ? '0s' : '0s'
-    }}>
-          <NavLink to='/'>Contact</NavLink>
+
+        <li className='nav__item'>
+        <ul className='item__sublist'>          
+            <li className='item__subitem item__subitem--uppercase'>
+            <div className="corner-tl"></div>
+      <div className="corner-tr"></div>
+      <div className="corner-bl"></div>
+      <div className="corner-br"></div>
+                <NavLink to='#' className='nav__link nav__link--uppercase'>Contact</NavLink>
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+            <li className='item__subitem'> 
+              <NavLink to='#' className='nav__link'>
+                <p>residential properties</p>
+                <Arrow />
+                </NavLink> 
+            </li>
+          </ul>
         </li>
       </ul>
-    </div>
     </div>
   )
 }
