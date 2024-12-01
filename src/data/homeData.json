@@ -1,0 +1,22 @@
+[
+    { "id": 1, 
+    "img1": "/img/home/Brightspace.png" ,
+    "img1left": "/img/home/Brightspace1.png",
+    "img1right": "/img/home/Brightspace2.png"
+    },
+    { "id": 2,
+    "img2": "/img/home/archshots.png",
+    "img2left": "/img/home/archshots1.png",
+    "img2right": "/img/home/archshots2.png"
+},
+    { "id": 3,
+    "img3": "/img/home/DroneVista.png",
+    "img3left": "/img/home/DroneVista1.png",
+    "img3right": "/img/home/DroneVista2.png"
+ },
+    { "id": 4, 
+     "img4": "/img/home/SpaceLens.png",
+     "img4left": "/img/home/SpaceLens1.png",
+     "img4right": "/img/home/SpaceLens2.png"
+    }
+  ]
