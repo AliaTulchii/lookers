@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Brightspace from '../../img/home/Brightspace.png';
 import Brightspace1 from '../../img/home/Brightspace1.png';
 import Brightspace2 from '../../img/home/Brightspace2.png';
+import { motion} from 'framer-motion';
 
 const Home = () => {
-
+  const [hoverItem, setHoverItem] = useState(false)
   // useEffect(() => {
   //   const body = document.body;
   //   if (activeItem) {
@@ -27,17 +28,34 @@ const Home = () => {
           <li className="upline__item upline__item--middle"></li>
           <li className="upline__item"></li>
         </ul>
+        
+
 
 
         <ul className="middleline">
           <li className="middleline__item random-img">
-            <img src={Brightspace1} alt="img" className="middleline__img"/>
+            {hoverItem && ( <motion.img 
+            src={Brightspace1} 
+            alt="img" 
+            className="middleline__img"
+            animate={{
+              y: [-50, 0],
+              transition: { ease: ["easeIn", "easeOut"], times: [0, 1], restSpeed: 1, duration: 0.9 }
+            }}
+            />) }
           </li>
           <li className="middleline__item middleline__item--middle">
-            <img src={Brightspace} alt="" className="middleline__img middleline__img--middle"/>
+
+            {hoverItem && (<motion.img src={Brightspace} alt="" className="middleline__img middleline__img--middle" animate={{
+              y: [-50, 0],
+              transition: { ease: ["easeIn", "easeOut"], times: [0, 1], restSpeed: 1, duration: 0.7 }
+            }}/> )}
           </li>
           <li className="middleline__item random-img">
-            <img src={Brightspace2} alt="" className="middleline__img"/>
+            {hoverItem && ( <motion.img src={Brightspace2} alt="" className="middleline__img" animate={{
+              y: [-50, 0],
+              transition: { ease: ["easeIn", "easeOut"], times: [0, 1], restSpeed: 1, duration: 0.9 }
+            }}/>)}
           </li>
         </ul>
         <ul className="downline">
@@ -54,22 +72,26 @@ const Home = () => {
         </p>
 
         <div className="home__downpart">
-          <div className="home__listsWrapper">
+          <div className="home__lists-wrapper">
             <ul className="home__list">
-              <li className="home__item "> 
-                <span className="home__item--uppercase">Bright space</span>
+              <li
+               className="home__item"
+               onMouseEnter={() => setHoverItem(true)}
+                onMouseLeave={() => setHoverItem(false)}
+               > 
+                <span className="home__item--uppercase" id="bright">Bright space</span>
               estate project</li>
               <li className="home__item "> 
-                <span className="home__item--uppercase">ArchShots</span> 
+                <span className="home__item--uppercase" id="arch">ArchShots</span> 
               architecture</li>
             </ul>
 
             <ul className="home__list home__list--right">
             <li className="home__item "> 
-              <span className="home__item--uppercase">DroneVista</span> 
+              <span className="home__item--uppercase" id="drone">DroneVista</span> 
             drone Photography</li>
             <li className="home__item "> 
-              <span className="home__item--uppercase">SpaceLens</span>
+              <span className="home__item--uppercase" id="space">SpaceLens</span>
             commercial Spaces</li>
             </ul>
           </div>

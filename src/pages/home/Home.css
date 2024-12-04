@@ -170,6 +170,8 @@ color: var(--home-text);
 cursor: pointer;
 }
 
+
+
 .home__item:hover{
    color: var(--white);
 }
