@@ -147,9 +147,11 @@ color: var(--text-color);
 }
 
 .home__list{
+    position: relative;
     display: flex;
     align-items:flex-end;
     gap: 8px;
+    z-index: 10;
 }
 
 .home__list:not(:last-child){

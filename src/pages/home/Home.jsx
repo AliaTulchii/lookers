@@ -3,18 +3,34 @@ import "./Home.css";
 import Brightspace from '../../img/home/Brightspace.png';
 import Brightspace1 from '../../img/home/Brightspace1.png';
 import Brightspace2 from '../../img/home/Brightspace2.png';
+import Arch1 from '../../img/home/archshots1.png'
+import Arch2 from '../../img/home/archshots2.png'
+import Arch from '../../img/home/archshots.png'
+import Drone from '../../img/home/DroneVista.png'
+import Drone1 from '../../img/home/DroneVista1.png'
+import Drone2 from '../../img/home/DroneVista2.png'
+import Space  from '../../img/home/SpaceLens.png'
+import Space1  from '../../img/home/SpaceLens1.png'
+import Space2  from '../../img/home/SpaceLens2.png'
+
+
+
+
+
 import { motion} from 'framer-motion';
 
 const Home = () => {
-  const [hoverItem, setHoverItem] = useState(false)
-  // useEffect(() => {
-  //   const body = document.body;
-  //   if (activeItem) {
-  //     body.classList.add("red");
-  //   } else {
-  //     body.classList.remove("red");
-  //   }
-  // }, [activeItem]);
+  const [hoveredItem, setHoveredItem] = useState(null)
+
+  const liItems = [0, 1, 2];
+  const items = {
+    bright: [Brightspace, Brightspace1, Brightspace2],
+    arch:[Arch, Arch1, Arch2],
+    drone: [Drone, Drone1, Drone2],
+    space: [Space, Space1, Space2]
+  }
+
+
 
   return (
     <section className="home__container container">
@@ -33,30 +49,33 @@ const Home = () => {
 
 
         <ul className="middleline">
-          <li className="middleline__item random-img">
-            {hoverItem && ( <motion.img 
-            src={Brightspace1} 
-            alt="img" 
-            className="middleline__img"
-            animate={{
-              y: [-50, 0],
-              transition: { ease: ["easeIn", "easeOut"], times: [0, 1], restSpeed: 1, duration: 0.9 }
-            }}
-            />) }
-          </li>
-          <li className="middleline__item middleline__item--middle">
+        
+{liItems.map((index) => (
+  <li
+    key={index}
+    className={`middleline__item ${
+      index === 1 ? "middleline__item--middle" : "random-img"
+    }`}
+  >
+    {items[hoveredItem]?.[index] ? (
+      <motion.img
+        src={items[hoveredItem][index]}
+        alt={`img-${index}`}
+        className="middleline__img"
+        animate={{
+          scale: [0.5, 1],
+          transition: {
+            ease: ["easeIn", "easeOut"],
+            times: [0, 1],
+            restSpeed: 1,
+            duration: 0.7 ,
+          },
+        }}
+      />
+    ) : null}
+  </li>
+))}
 
-            {hoverItem && (<motion.img src={Brightspace} alt="" className="middleline__img middleline__img--middle" animate={{
-              y: [-50, 0],
-              transition: { ease: ["easeIn", "easeOut"], times: [0, 1], restSpeed: 1, duration: 0.7 }
-            }}/> )}
-          </li>
-          <li className="middleline__item random-img">
-            {hoverItem && ( <motion.img src={Brightspace2} alt="" className="middleline__img" animate={{
-              y: [-50, 0],
-              transition: { ease: ["easeIn", "easeOut"], times: [0, 1], restSpeed: 1, duration: 0.9 }
-            }}/>)}
-          </li>
         </ul>
         <ul className="downline">
           <li className="downline__item"></li>
@@ -76,21 +95,33 @@ const Home = () => {
             <ul className="home__list">
               <li
                className="home__item"
-               onMouseEnter={() => setHoverItem(true)}
-                onMouseLeave={() => setHoverItem(false)}
+               onMouseEnter={() => setHoveredItem("bright")}
+                onMouseLeave={() => setHoveredItem(null)}
                > 
                 <span className="home__item--uppercase" id="bright">Bright space</span>
               estate project</li>
-              <li className="home__item "> 
+              <li 
+              className="home__item "
+              onMouseEnter={() => setHoveredItem("arch")}
+                onMouseLeave={() => setHoveredItem(null)}
+              > 
                 <span className="home__item--uppercase" id="arch">ArchShots</span> 
               architecture</li>
             </ul>
 
             <ul className="home__list home__list--right">
-            <li className="home__item "> 
+            <li
+             className="home__item "
+             onMouseEnter={() => setHoveredItem("drone")}
+                onMouseLeave={() => setHoveredItem(null)}
+             > 
               <span className="home__item--uppercase" id="drone">DroneVista</span> 
             drone Photography</li>
-            <li className="home__item "> 
+            <li 
+            className="home__item "
+            onMouseEnter={() => setHoveredItem("space")}
+                onMouseLeave={() => setHoveredItem(null)}
+            > 
               <span className="home__item--uppercase" id="space">SpaceLens</span>
             commercial Spaces</li>
             </ul>
