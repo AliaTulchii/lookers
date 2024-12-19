@@ -95,7 +95,7 @@
 .middleline__img{
     width: 437px;
     height: 354px;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 .middleline__img--middle{
@@ -192,7 +192,7 @@ line-height: 1.02;
 .home__title{
     font-family: var(--font-family);
 font-weight: 900;
-font-size: 260px;
+font-size: 240px;
 line-height: 117%;
 letter-spacing: -0.03em;
 text-transform: uppercase;
@@ -201,9 +201,22 @@ color: var(--home-text);
 
 .title__figure {
     position: relative;
-    width: 310px;
-    height: 245px;
+    width: 300px;
+    height: 235px;
 }
+
+/* .video{
+    width: 309px;
+    height: 244px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+} */
+
+
 
 .title__img {
     position: absolute;
@@ -214,16 +227,17 @@ color: var(--home-text);
     background-image: url(../../img/home/title.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 5;
 }
 
 /* Перше коло */
 .title__img--circleOne {
-    clip-path: circle(65px at 70px 120px);
+    clip-path: circle(55px at 60px 120px);
 }
 
 /* Друге коло */
  .title__img--circleTwo {
-    clip-path: circle(110px at 200px 120px);
+    clip-path: circle(100px at 190px 125px);
 } 
 
 

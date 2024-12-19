@@ -130,6 +130,10 @@ const Home = () => {
           <div className="home__titleWrapper">
             <h2 className="home__title">L</h2>
             <div className="title__figure">
+            {/* <video  autoPlay preload="auto" loop muted poster="../../img/home/archshots.png"  className="video">
+            <source src="https://drive.google.com/drive/folders/1weZdy6NKcnuytGXjVLOTc-GGC1AYMbGU" type="video/mp4" />
+        </video> */}
+
               <div className="title__img title__img--circleOne"></div>
               <div className="title__img title__img--circleTwo"></div>
             </div>

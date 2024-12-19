@@ -18,7 +18,7 @@ const Header = () => {
   }, [navOpen]);
 
   useEffect(() => {
-    setNavOpen(false); // Закриваємо меню
+    setNavOpen(false); 
   }, [location]);
 
   return (
